@@ -37,6 +37,6 @@ Dentro do diretório (mude no comando para o nome da sua função) e execute:
 
 ## Teste
 
-Vá no arquivo arquivo index.ts (esta dentro de functions/src/) descomente o código do arquivo e execute o comando abaixo dentro do diretório:
+Vá no arquivo arquivo index.ts (esta dentro de functions/src/) descomente o código do arquivo e execute o comando dentro do diretório:
 
     cd functions/ && npm run build && firebase deploy --only functions:hellWorld && cd ..
