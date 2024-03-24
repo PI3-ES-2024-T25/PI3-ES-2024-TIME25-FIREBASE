@@ -3,7 +3,6 @@ import { Timestamp } from "firebase-admin/firestore";
 export type Account = {
   email: string;
   password: string;
-  entityId?: string; // This is the ID of the entity in Firestore
 };
 
 export type CreditCard = {
