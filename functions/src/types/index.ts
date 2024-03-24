@@ -48,6 +48,7 @@ export type RentalOption = {
 
 export type Unit = { // collection de unidades
   unitId?: string; // This is the ID of the unit in Firestore
+  managerId?: string;
   name: string;
   description: string;
   address: {
