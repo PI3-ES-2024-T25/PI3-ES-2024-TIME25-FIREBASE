@@ -2,11 +2,11 @@
 ## Setup
 Precisa ter o node na sua máquina (versão recomendada 18 stable)
 
-Instale as ferramentas do firebase
+Instale as ferramentas do firebase:
 
     npm i -g firebase-tools
 
-Faça login
+Faça login:
 
     firebase login
 
@@ -16,7 +16,7 @@ No arquivo .firebaserc troque o valor no objeto de default para o id do projeto 
     perto da logo do firebase, clique no simbolo de engrenagem em Project Overview e então em Project Settings, então voce ira procurar pelo seu Project ID 
 )
 
-Baixe as dependencias, dentro do diretório do projeto
+Baixe as dependencias, dentro do diretório do projeto:
     
     cd functions/ && npm i && cd ..
 
@@ -29,6 +29,6 @@ Dentro do diretório (mude no comando para o nome da sua função):
 
 ## Teste
 
-Vá no arquivo arquivo index.ts (esta dentro de functions/src/) e descomente os imports e a função helloWorld e execute o comando abaixo:
+Vá no arquivo arquivo index.ts (esta dentro de functions/src/) descomente o código do arquivo e execute o comando abaixo dentro do diretório:
 
     cd functions/ && npm run build && firebase deploy --only functions:hellWorld && cd ..
