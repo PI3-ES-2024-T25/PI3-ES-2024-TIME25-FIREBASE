@@ -10,9 +10,10 @@ export enum Status {
   FINISHED = "FINISHED"
 }
 
-export type Account = {
+export type Account = { // Vai para a autenticação
   email: string;
   password: string;
+  // entityId: string; // This is the ID of the entity in Firestore
 };
 
 export type CreditCard = {
@@ -22,7 +23,7 @@ export type CreditCard = {
   cvv: string;
 };
 
-export type Entity = {
+export type Entity = { // collection de pessoas
   entityId?: string; // This is the ID of the entity in Firestore
   name: string;
   document: string;
@@ -45,7 +46,7 @@ export type RentalOption = {
   price: number;
 };
 
-export type Unit = {
+export type Unit = { // collection de unidades
   unitId?: string; // This is the ID of the unit in Firestore
   name: string;
   description: string;
@@ -67,7 +68,7 @@ export type Unit = {
   lockers: Locker[];
 };
 
-export type Rental = {
+export type Rental = { // collection de alugueis/locações
   rentalId?: string; // This is the ID of the rental in Firestore
   clientId: string;
   startDate: Timestamp;
