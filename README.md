@@ -1,6 +1,10 @@
 # Firebase
 ## Setup
-Precisa ter o node na sua máquina (versão recomendada 18 stable)
+Precisa ter o node na sua máquina (versão suportadas 18, 16 ou 14)
+
+Para ver a sua versão do node:
+
+    node --version
 
 Instale as ferramentas do firebase:
 
