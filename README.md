@@ -14,8 +14,8 @@ Faça login:
 
 No projeto procure o arquivo .firebaserc.example faça uma cópia e renomeie a CÓPIA para .firebaserc
 
-No arquivo .firebaserc troque o valor no objeto de default para o id do projeto do SEU firebase ( já dentro do projeto, 
-    perto da logo do firebase, clique no símbolo de engrenagem em Project Overview e então em Project Settings, procure pelo seu Project ID 
+No arquivo .firebaserc troque o valor no objeto de default para o id do projeto do SEU firebase ( já dentro do projeto do console na web, 
+    perto da logo do firebase, clique no símbolo de engrenagem em Project Overview > Project Settings, procure pelo seu Project ID 
 )
 
 ## Instale as dependencias
