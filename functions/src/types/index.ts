@@ -32,7 +32,7 @@ export type Entity = {
   credentials: Account;
   creditCard?: CreditCard;
 };
-Timestamp;
+
 export type Locker = {
   name: string;
   available: boolean;
