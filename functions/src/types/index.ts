@@ -60,8 +60,8 @@ export type Unit = { // collection de unidades
     zipCode?: string;
   };
   coordinates: {
-    lat: number;
-    lng: number;
+    latitude: number;
+    longitude: number;
   };
   rentalOptions: RentalOption[];
   lockersQuantity: number;
