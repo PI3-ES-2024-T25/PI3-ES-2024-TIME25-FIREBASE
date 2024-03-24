@@ -1,14 +1,14 @@
 import { Timestamp } from "firebase-admin/firestore";
 
-export enum Role {
-  MANAGER = "MANAGER",
-  CLIENT = "CLIENT"
-}
+// export enum Role {
+//   MANAGER = "MANAGER",
+//   CLIENT = "CLIENT"
+// }
 
-export enum Status {
-  ACTIVE = "ACTIVE",
-  FINISHED = "FINISHED"
-}
+// export enum Status {
+//   ACTIVE = "ACTIVE",
+//   FINISHED = "FINISHED"
+// }
 
 export type Account = { // Vai para a autenticação
   email: string;
@@ -29,7 +29,7 @@ export type Entity = { // collection de pessoas
   document: string;
   phoneNumber: string;
   birthday: string;
-  role: Role;
+  isManager: boolean;
   credentials: Account;
   creditCard?: CreditCard;
 };
@@ -37,7 +37,7 @@ export type Entity = { // collection de pessoas
 export type Locker = {
   lockerId?: string;
   name: string;
-  available: boolean;
+  isAvailable: boolean;
 };
 
 export type RentalOption = {
@@ -80,5 +80,5 @@ export type Rental = { // collection de alugueis/locações
     rentalOptionId: string;
   };
   imageUrl: string[];
-  status: Status;
+  isActive: boolean;
 };
