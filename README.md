@@ -10,9 +10,15 @@ Faça login
 
     firebase login
 
-No projeto procure o arquivo .firebaserc.example faça uma cópia e renomeie para .firebaserc somente.
+No projeto procure o arquivo .firebaserc.example faça uma cópia e renomeie para .firebaserc
 
-No arquivo .firebaserc troque o valor no objeto de default para o nome do projeto do SEU firebase
+No arquivo .firebaserc troque o valor no objeto de default para o id do projeto do SEU firebase (
+    perto da logo do firebase, clique no simbolo de engrenagem em Project Overview e então em Project Settings, então voce ira procurar pelo seu Project ID 
+)
+
+Baixe as dependencias, dentro do diretório do projeto
+    
+    cd functions/ && npm i && cd ..
 
 ## Upload das functions
 Agora voce pode subir as functions para o seu firebase, recomendo subir função uma a uma
