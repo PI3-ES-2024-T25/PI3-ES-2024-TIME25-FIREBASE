@@ -19,7 +19,7 @@ export type Account = { // Vai para a autenticação
 export type CreditCard = {
   cardNumber: string;
   cardHolder: string;
-  expirationDate: Date;
+  expirationDate: string;
   cvv: string;
 };
 
