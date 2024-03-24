@@ -26,3 +26,9 @@ Agora voce pode subir as functions para o seu firebase, recomendo subir função
 Dentro do diretório (mude no comando para o nome da sua função):
     
     cd functions/ && npm run build && firebase deploy --only functions:minhaFuncao && cd ..
+
+## Teste
+
+Vá no arquivo arquivo index.ts (esta dentro de functions/src/) e descomente os imports e a função helloWorld e execute o comando abaixo:
+
+    cd functions/ && npm run build && firebase deploy --only functions:hellWorld && cd ..
