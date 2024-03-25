@@ -14,16 +14,15 @@ export const createUnit = (unit: Unit) => {
     onRequest(async (req, res) => {
       try {
         const lockersIds: string[] = [];
-        lockersModel.forEach(async (locker) => {
-          await lockersCollection.add(locker).then((lockerRef) =>
-            lockersIds.push(lockerRef.id)
-          );
-        });
+        for (const locker of lockersModel) {
+          const lockerRef = await lockersCollection.add(locker);
+          lockersIds.push(lockerRef.id);
+        }
         await unitsCollection.add({
           ...unit,
           lockers: lockersIds,
         });
-        res.status(200).send("Document created successfully!");
+        res.status(200).send(`Document created successfully ${lockersIds}`);
       } catch (error) {
         res.status(500).send(`Error creating document: ${error}`);
       }
