@@ -1,23 +1,32 @@
-import { Entity, Unit } from "../types";
+import { CreateUserType, Entity, Locker, Unit } from "../types";
 
-export const willUserManager: Entity = {
+const willUserManager: Entity = {
   name: "Willian Silva Ferreira",
   document: "123.123.123-12",
   phoneNumber: "(11) 22334-2233",
   birthday: "29/08/2003",
   isManager: true,
+
+};
+
+const willUserClient: Entity = {
+  name: "Willian Silva Ferreira",
+  document: "122.122.122-13",
+  phoneNumber: "(11) 22334-2233",
+  birthday: "29/08/2003",
+  isManager: false,
+};
+
+export const willUserManagerRequest : CreateUserType = {
+  entity: willUserManager,
   credentials: {
     email: "willsferreir@gmail.com",
     password: "senha",
   },
 };
 
-export const willUserClient: Entity = {
-  name: "Willian Silva Ferreira",
-  document: "122.122.122-13",
-  phoneNumber: "(11) 22334-2233",
-  birthday: "29/08/2003",
-  isManager: false,
+export const willUserClientRequest : CreateUserType = {
+  entity: willUserClient,
   credentials: {
     email: "williansilva9434@gmail.com",
     password: "senha",
@@ -40,20 +49,6 @@ export const unit1Puccampinas: Unit = {
     longitude: -47.0525424,
   },
   lockersQuantity: 3,
-  lockers: [
-    {
-      name: "Locker 1",
-      isAvailable: true,
-    },
-    {
-      name: "Locker 2",
-      isAvailable: true,
-    },
-    {
-      name: "Locker 3",
-      isAvailable: true,
-    },
-  ],
   rentalOptions: [
     {
       time: 1,
@@ -95,20 +90,6 @@ export const unit2Puccampinas: Unit = {
     longitude: -47.1219991,
   },
   lockersQuantity: 3,
-  lockers: [
-    {
-      name: "Locker 1",
-      isAvailable: true,
-    },
-    {
-      name: "Locker 2",
-      isAvailable: true,
-    },
-    {
-      name: "Locker 3",
-      isAvailable: true,
-    },
-  ],
   rentalOptions: [
     {
       time: 1,
@@ -133,4 +114,17 @@ export const unit2Puccampinas: Unit = {
   ],
 };
 
-
+export const lockersModel : Locker[] = [
+  {
+    name: "Armário 1",
+    isAvailable: true,
+  },
+  {
+    name: "Armário 2",
+    isAvailable: true,
+  },
+  {
+    name: "Armário 3",
+    isAvailable: true,
+  },
+];
