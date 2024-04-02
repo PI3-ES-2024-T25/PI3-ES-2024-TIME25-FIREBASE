@@ -10,10 +10,9 @@ import { Timestamp } from "firebase-admin/firestore";
 //   FINISHED = "FINISHED"
 // }
 
-export type Account = { // Vai para a autenticação
+export type Credentials = {
   email: string;
   password: string;
-  // entityId: string; // This is the ID of the entity in Firestore
 };
 
 export type CreditCard = {
@@ -24,15 +23,24 @@ export type CreditCard = {
 };
 
 export type Entity = { // collection de pessoas
-  entityId?: string; // This is the ID of the entity in Firestore
   name: string;
   document: string;
   phoneNumber: string;
   birthday: string;
   isManager: boolean;
-  credentials: Account;
   creditCard?: CreditCard;
 };
+
+export type CreateUserType = {
+  entity: Entity;
+  credentials: Credentials;
+}
+
+export type Account = {
+  entityId: string;
+  email:string;
+  password:string;
+}
 
 export type Locker = {
   lockerId?: string;
@@ -66,7 +74,7 @@ export type Unit = { // collection de unidades
   };
   rentalOptions: RentalOption[];
   lockersQuantity: number;
-  lockers: Locker[];
+  lockers?: string[];
 };
 
 export type Rental = { // collection de alugueis/locações
