@@ -1,5 +1,44 @@
 import { CreateUserType, Entity, Locker, Unit } from "../types";
 
+type Options = {
+  id: string;
+  time: number;
+  price: number;
+}
+
+const options: Options[] = [
+  {
+    id: "1",
+    time: 60,
+    price: 10,
+  },
+  {
+    id: "2",
+    time: 120,
+    price: 20,
+  },
+  {
+    id: "3",
+    time: 180,
+    price: 25,
+  },
+  {
+    id: "4",
+    time: 240,
+    price: 30,
+  },
+  {
+    id: "5",
+    time: 300,
+    price: 35,
+  },
+  {
+    id: "6",
+    time: 30,
+    price: 5,
+  },
+];
+
 const willUserManager: Entity = {
   name: "Willian Silva Ferreira",
   document: "123.123.123-12",
@@ -49,28 +88,11 @@ export const unit1Puccampinas: Unit = {
     longitude: -47.0525424,
   },
   lockersQuantity: 3,
-  rentalOptions: [
-    {
-      time: 1,
-      price: 10,
-    },
-    {
-      time: 2,
-      price: 20,
-    },
-    {
-      time: 3,
-      price: 25,
-    },
-    {
-      time: 4,
-      price: 30,
-    },
-    {
-      time: 5,
-      price: 35,
-    },
-  ],
+  rentalOptions: options,
+  manager: {
+    id: "1",
+    name: "Gerente da unidade 1",
+  },
 };
 
 export const unit2Puccampinas: Unit = {
@@ -90,28 +112,57 @@ export const unit2Puccampinas: Unit = {
     longitude: -47.1219991,
   },
   lockersQuantity: 3,
-  rentalOptions: [
-    {
-      time: 1,
-      price: 10,
-    },
-    {
-      time: 2,
-      price: 20,
-    },
-    {
-      time: 3,
-      price: 25,
-    },
-    {
-      time: 4,
-      price: 30,
-    },
-    {
-      time: 5,
-      price: 35,
-    },
-  ],
+  rentalOptions: options,
+  manager: {
+    id: "2",
+    name: "Gerente da unidade 2",
+  },
+};
+
+export const unitOkaVistaQuiosqueRj: Unit ={
+  name: "Oka Vista",
+  description:
+  "Quiosque Oka Vista, Mirante do Leblon",
+  address: {
+    street: "Av. Niemeyer",
+    number: "3",
+    neighborhood: "Vidigal",
+    city: "Rio de Janeiro",
+    state: "RJ",
+    country: "Brasil",
+  },
+  coordinates: {
+    latitude: -22.989872261188637, longitude: -43.227308764927024,
+  },
+  lockersQuantity: 3,
+  rentalOptions: options,
+  manager: {
+    id: "3",
+    name: "Gerente da unidade 3",
+  },
+};
+
+export const unitMackenzie: Unit = {
+  name: "Mackenzie",
+  description: "Universidade Presbiteriana Mackenzie, Campus Campinas",
+  address: {
+    street: "Av. Brasil",
+    number: "1220",
+    neighborhood: "Jardim Guanabara",
+    city: "Campinas",
+    state: "SP",
+    country: "Brasil",
+  },
+  coordinates: {
+    latitude: -22.88555397081755,
+    longitude: -47.068508020990265,
+  },
+  lockersQuantity: 3,
+  rentalOptions: options,
+  manager: {
+    id: "4",
+    name: "Gerente da unidade 4",
+  },
 };
 
 export const lockersModel : Locker[] = [
@@ -128,3 +179,5 @@ export const lockersModel : Locker[] = [
     isAvailable: true,
   },
 ];
+
+

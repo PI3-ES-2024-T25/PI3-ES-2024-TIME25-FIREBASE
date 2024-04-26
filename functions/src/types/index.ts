@@ -75,6 +75,10 @@ export type Unit = { // collection de unidades
   rentalOptions: RentalOption[];
   lockersQuantity: number;
   lockers?: string[];
+  manager: {
+    id: string;
+    name: string;
+  }
 };
 
 export type Rental = { // collection de alugueis/locações
