@@ -7,10 +7,6 @@ exports.onRentCreate = functionsV1.firestore
   .onCreate(async (snap: DocumentSnapshot, context: EventContext) => {
     const rentData = snap.data();
     const userId = rentData?.uid;
-    console.log(
-      `Document created in 'rent' with ID: 
-      ${context.params.rentId}, User ID: ${userId}`
-    );
 
     const userRef = app.firestore().doc(`users/${userId}`);
     const lastRent = {
@@ -18,11 +14,5 @@ exports.onRentCreate = functionsV1.firestore
       verified: false, // ou qualquer valor inicial que você queira
     };
 
-    return userRef.update({ lastRent })
-      .then(() => console.log(
-        `User document with ID: ${userId} updated successfully`
-      ))
-      .catch((error) => console.log(
-        `Failed to update user document with ID: ${userId}. Error: ${error}`
-      ));
+    return userRef.update({ lastRent });
   });

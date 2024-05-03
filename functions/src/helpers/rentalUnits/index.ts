@@ -21,6 +21,7 @@ export const createUnit = (unit: Unit) => {
         await unitsCollection.add({
           ...unit,
           lockers: lockersIds,
+          lockersAvailable: lockersIds,
         });
         res.status(200).send(`Document created successfully ${lockersIds}`);
       } catch (error) {

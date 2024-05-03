@@ -1,5 +1,7 @@
 import { createUnit } from "./helpers/rentalUnits";
 import {
+  mzcTest,
+  testC,
   unit1Puccampinas,
   unit2Puccampinas,
   unitMackenzie,
@@ -18,6 +20,8 @@ export const createUnitPucCampinasH15 = createUnit(unit1Puccampinas);
 export const createUnitPucCampinasOdontologia = createUnit(unit2Puccampinas);
 export const createUnitOkaVista = createUnit(unitOkaVistaQuiosqueRj);
 export const createUnitMackenzie = createUnit(unitMackenzie);
+export const testCHome = createUnit(testC);
+export const mzcHomeTest = createUnit(mzcTest);
 // Usuário
 export const createUserFunction = createUser();
 // trigger

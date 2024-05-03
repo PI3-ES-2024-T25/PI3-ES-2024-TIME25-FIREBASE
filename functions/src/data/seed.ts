@@ -185,4 +185,49 @@ export const lockersModel : Locker[] = [
   },
 ];
 
+export const testC: Unit = {
+  name: "home C",
+  description: "home c Test",
+  address: {
+    street: "Test ",
+    number: "Test ",
+    neighborhood: "Test ",
+    city: "Test ",
+    state: "Test ",
+    country: "Test ",
+  },
+  coordinates: {
+    latitude: -22.91841325,
+    longitude: -47.1025378,
+  },
+  lockersQuantity: 3,
+  rentalOptions: options,
+  manager: {
+    id: "5",
+    name: "Caio da unidade 5",
+  },
+};
 
+
+export const mzcTest: Unit = {
+  name: "MZC Test",
+  description: "MZC Test",
+  address: {
+    street: "Test ",
+    number: "Test ",
+    neighborhood: "Test ",
+    city: "Test ",
+    state: "Test ",
+    country: "Test ",
+  },
+  coordinates: {
+    latitude: -22.693850,
+    longitude: -46.984288,
+  },
+  lockersQuantity: 3,
+  rentalOptions: options,
+  manager: {
+    id: "6",
+    name: "Caio da unidade 6",
+  },
+};
